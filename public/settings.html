@@ -21,7 +21,12 @@
       <section class="card" aria-labelledby="sync-title">
         <h2 id="sync-title">Cloud sync</h2>
         <p class="muted">Your notes are copied to the cloud so you can open them on any device.</p>
-        <button type="button" id="sync">Sync now</button>
+        <div class="sync-row">
+          <button type="button" id="sync">Sync now</button>
+          <p id="last-sync" class="muted"><time>Checking last sync…</time></p>
+        </div>
+        <p id="sync-status" class="visually-hidden" aria-live="polite"></p>
+        <p id="sync-error" class="error" role="alert" hidden>Sync failed. Your notes are safe on this device; try again.</p>
       </section>
     </main>
     <script type="module" src="/settings.js"></script>

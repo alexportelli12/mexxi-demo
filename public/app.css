@@ -1,4 +1,4 @@
-:root { --bg: #f7f7f5; --card: #fff; --text: #1d1d1f; --muted: #6b6b70; --accent: #2f6fde; --border: #e3e3e0; }
+:root { --bg: #f7f7f5; --card: #fff; --text: #1d1d1f; --muted: #6b6b70; --accent: #2f6fde; --border: #e3e3e0; --error: #b42318; }
 * { box-sizing: border-box; }
 body { margin: 0; font: 16px/1.5 system-ui, sans-serif; background: var(--bg); color: var(--text); }
 header { display: flex; gap: 1.5rem; align-items: center; padding: 1rem 1.5rem; background: var(--card); border-bottom: 1px solid var(--border); }
@@ -12,3 +12,7 @@ main { max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
 button { font: inherit; padding: 0.6rem 1.1rem; min-height: 44px; border: 0; border-radius: 8px; background: var(--accent); color: #fff; cursor: pointer; }
 button:disabled { opacity: 0.6; cursor: progress; }
 label { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 0.5rem 0; }
+.sync-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
+.sync-row p { margin: 0; }
+.error { color: var(--error); margin: 0.75rem 0 0; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
