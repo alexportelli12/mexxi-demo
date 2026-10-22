@@ -1,0 +1,13 @@
+{
+  "name": "mexxi-demo",
+  "private": true,
+  "type": "module",
+  "description": "A tiny notes app used to compare agent pull requests with and without mexxi.",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test",
+    "check": "node scripts/check.mjs",
+    "verify": "npm run --silent check && npm test"
+  }
+}

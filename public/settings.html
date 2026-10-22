@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings · Notes</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <header>
+      <strong>Notes</strong>
+      <a href="/">Notes</a>
+      <a href="/settings.html" aria-current="page">Settings</a>
+    </header>
+    <main>
+      <h1>Settings</h1>
+      <section class="card" aria-labelledby="appearance">
+        <h2 id="appearance">Appearance</h2>
+        <label>Compact list <input type="checkbox" /></label>
+      </section>
+      <section class="card" aria-labelledby="sync-title">
+        <h2 id="sync-title">Cloud sync</h2>
+        <p class="muted">Your notes are copied to the cloud so you can open them on any device.</p>
+        <button type="button" id="sync">Sync now</button>
+      </section>
+    </main>
+    <script type="module" src="/settings.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notes</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <header>
+      <strong>Notes</strong>
+      <a href="/" aria-current="page">Notes</a>
+      <a href="/settings.html">Settings</a>
+    </header>
+    <main>
+      <h1>Your notes</h1>
+      <div id="notes"></div>
+    </main>
+    <script type="module">
+      const notes = await (await fetch("/api/notes")).json();
+      document.getElementById("notes").replaceChildren(
+        ...notes.map((note) => {
+          const card = document.createElement("article");
+          card.className = "card";
+          card.innerHTML = "<h2></h2><p class='muted'></p>";
+          card.querySelector("h2").textContent = note.title;
+          card.querySelector("p").textContent = note.body;
+          return card;
+        }),
+      );
+    </script>
+  </body>
+</html>
